@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="form group">
+        <label for="">Họ tên</label>
+        <input type="text" name="txtName" id="txtName" value="phuongPv" class="form-control bg-danger">
+    </div>
+    <div id="divTextName" class="border"></div>
+    <button type="submit" id="btnClick" class="btn btn-dark">Click me</button>
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            
+            $("#btnClick").click(function () {
+                var className = $("#txtName").val();
+                alert(className);
+                // $("#txtName").addClass("bg-danger text-while");
+                // className = $("#txtName").attr("class");
+                // alert("Class mới: " + className);
+            });
+            $("#txtName").keyup(function () {
+                $("#divTextName").html($("#txtName").val());
+            });
+            $("#txtName").bind("keyup", function () {
+                $("#divTextName").html($("#txtName").val());
+            });
+            $
+        }
+        );
+
+    </script>
+</body>
+
+</html>
